@@ -1,0 +1,47 @@
+<%= form_for(article) do |f| %>
+  <% if article.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(article.errors.count, "error") %> prohibited this article from being saved:</h2>
+
+      <ul>
+      <% article.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :title %>
+    <%= f.text_field :title %>
+  </div>
+
+  <div class="field">
+    <%= f.label :categories %>
+    <%= f.text_field :categories %>
+  </div>
+
+  <div class="field">
+    <%= f.label :cited_domains %>
+    <%= f.text_field :cited_domains %>
+  </div>
+
+  <div class="field">
+    <%= f.label :cited_authors %>
+    <%= f.text_field :cited_authors %>
+  </div>
+
+  <div class="field">
+    <%= f.label :quality %>
+    <%= f.text_field :quality %>
+  </div>
+
+  <div class="field">
+    <%= f.label :importance %>
+    <%= f.text_field :importance %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

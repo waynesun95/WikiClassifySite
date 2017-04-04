@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # README
 
 This README would normally document whatever steps are necessary to get the
@@ -22,3 +23,7 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+=======
+# WikiClassifySite
+Website for WikiClassify2.0
+>>>>>>> 43d1893e3c4642995095e0685902be5e953da252

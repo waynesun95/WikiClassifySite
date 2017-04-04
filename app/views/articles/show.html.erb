@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @article.title %>
+</p>
+
+<p>
+  <strong>Categories:</strong>
+  <%= @article.categories %>
+</p>
+
+<p>
+  <strong>Cited domains:</strong>
+  <%= @article.cited_domains %>
+</p>
+
+<p>
+  <strong>Cited authors:</strong>
+  <%= @article.cited_authors %>
+</p>
+
+<p>
+  <strong>Quality:</strong>
+  <%= @article.quality %>
+</p>
+
+<p>
+  <strong>Importance:</strong>
+  <%= @article.importance %>
+</p>
+
+<%= link_to 'Edit', edit_article_path(@article) %> |
+<%= link_to 'Back', articles_path %>
