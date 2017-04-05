@@ -1,2 +1,142 @@
-<h1>Index#about</h1>
-<p>Find me in app/views/index/about.html.erb</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+  <link rel=icon href="images/favicon.png">
+  <title>About</title>
+
+  <!-- CSS  -->
+  <%= stylesheet_link_tag "https://fonts.googleapis.com/icon?family=Material+Icons" %>
+
+  <%= stylesheet_link_tag "materialize", media: "all" %>
+
+  <%= stylesheet_link_tag "style", media: "all" %>
+
+  <%= stylesheet_link_tag "https://fonts.googleapis.com/css?family=Roboto+Slab|Overpass" %>
+</head>
+<body>
+  <!--<header>
+    <nav class="blue" role="navigation">
+      <div class="nav-wrapper container">
+        <a href="index.html" class="brand-logo center"><%= image_tag "logo_sm.svg" %></a>
+        <ul class="right">
+          <li><a href="">Browse</a></li>
+          <li><a href="about.html">About</a></li>
+        </ul>
+  
+        <ul id="nav-mobile" class="side-nav">
+          <li><a href="">Browse</a></li>
+          <li><a href="about.html">About</a></li>
+        </ul>
+        <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+      </div>
+    </nav>
+  </header>-->
+
+  <main>
+    <br><br>
+    <div class="container">
+      <div class="row">
+        <div class="col s12 m9 l10">
+          <div id="intro" class="section scrollspy">
+            <h3 class="center">Our Objective</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ornare nulla at commodo cursus. Etiam lorem diam, sodales a semper non, aliquam et dui. Sed a ante justo. Suspendisse euismod velit quis diam rhoncus varius. Maecenas id dapibus purus. Vestibulum et efficitur orci. Duis pellentesque odio arcu, id pretium arcu ultricies ut. Etiam lobortis blandit diam, nec dignissim turpis varius vitae. Aliquam nisi nisi, tristique at sagittis eu, dapibus vitae mi. Vivamus posuere risus nec vehicula convallis. Pellentesque vulputate nisl risus, eget molestie mauris finibus aliquet. In viverra magna nec orci fermentum vestibulum. Aliquam vel lectus eget nunc suscipit aliquam. Aliquam congue vestibulum nunc, in hendrerit elit vehicula a. Praesent egestas, mauris eu condimentum tristique, nisl massa aliquet ligula, ut convallis turpis nulla in metus. Ut bibendum libero vel ante cursus, id interdum nulla vehicula.</p>
+            <p>Nullam dapibus elit vel ipsum varius luctus. Nam in cursus libero. Vestibulum ut felis tortor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus lacinia lorem et nisi condimentum ornare. Nunc id nibh mi. Vivamus imperdiet lacinia bibendum. Quisque in lobortis nisi. Praesent ut mollis felis, ut semper sapien. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Vivamus tincidunt neque vitae nisl varius, id rutrum odio efficitur. Sed auctor vitae lacus at dignissim. Suspendisse eget ipsum massa. Suspendisse potenti. Mauris lectus purus, porttitor et tempus eget, malesuada lacinia libero.</p>
+            <p>Integer nibh arcu, placerat sed fringilla et, consequat quis lacus. Quisque tincidunt leo purus, et tristique ex ultrices sed. Suspendisse vehicula arcu a ante dapibus rhoncus. Curabitur pulvinar, lacus in sollicitudin sagittis, lacus urna tristique augue, convallis tempus tellus purus sit amet sapien. Pellentesque aliquam mauris vitae mauris posuere, at scelerisque tellus placerat. Aliquam imperdiet erat elit, id maximus leo suscipit sit amet. Nullam est dolor, luctus quis velit mattis, feugiat gravida ligula. Aliquam elementum ultricies aliquet. Maecenas accumsan nunc sed dignissim vulputate. Maecenas commodo odio vel dictum gravida. Suspendisse sed sapien dapibus, efficitur odio vitae, malesuada libero. Pellentesque accumsan porta erat. Ut vel augue ullamcorper, pulvinar nunc id, dignissim sapien. Sed vel ante elementum, vehicula nulla in, rhoncus metus. Aenean odio neque, finibus non nisl ut, pretium sodales odio.</p>
+            <p>Mauris tristique risus nibh, vitae lobortis urna pellentesque et. Aliquam interdum dui ut enim faucibus volutpat. Nam bibendum facilisis est, in dignissim nisi. Mauris eleifend lacinia eros eu condimentum. Phasellus quis neque id quam accumsan lacinia et et purus. Sed accumsan turpis at congue consectetur. Pellentesque volutpat eget nisl id vehicula. Nunc quis porta massa. Etiam consectetur tellus non viverra vestibulum. Etiam venenatis mattis ex. Aliquam a tempor est, nec faucibus mauris. Nullam id rhoncus leo. Morbi volutpat urna a lectus finibus gravida.</p>
+            <p>Mauris sed lacus vitae nunc vulputate tempus. Aenean placerat gravida elit ut mollis. Vivamus est velit, lacinia eget mattis sit amet, molestie ac mi. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum id aliquet metus, in efficitur massa. Interdum et malesuada fames ac ante ipsum primis in faucibus. Suspendisse commodo nulla vitae lectus rhoncus, eu blandit sapien feugiat. Phasellus maximus ipsum non placerat dignissim. Ut nec augue quis ante rhoncus varius pellentesque a ligula. Ut ac fringilla leo, nec porttitor ipsum. Praesent eros odio, lacinia eget pharetra accumsan, tempor non lectus. Morbi velit sem, eleifend nec volutpat nec, mattis eu dolor. Mauris bibendum varius lectus a porta. Morbi feugiat nunc sit amet elit fermentum pulvinar vel eget velit. Donec id blandit est, et maximus tellus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+          </div>
+    
+          <div id="model" class="section scrollspy">
+            <h2 class="center">Our Model</h2>
+            <div class="row">
+              <div class="col s12">
+                <div class="card">
+                  <div class="card-image">
+                    <%=image_tag "preprocessing.gif" %>
+                    <span class="card-title">Card Title</span>
+                  </div>
+                  <div class="card-content" style="border-top:1px solid rgba(160, 160, 160, 0.2);">
+                    <p>I am a very simple card. I am good at containing small bits of information.
+                    I am convenient because I require little markup to use effectively.</p>
+                  </div>
+                  <div class="card-action center-align">
+                    <a href="https://de.dariah.eu/tatom/preprocessing.html" class="blue-text">Read more</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+    
+          <div id="team" class="section scrollspy">
+            <h3 class="center">Our Team</h3>
+
+            <div class="row">
+              <div class="col s3">
+                <div class="card">
+                  <div class="card-content center-align">
+                    <!--<img class="circle" height="100px" src="https://s3.amazonaws.com/nvest/Blank_Club_Website_Avatar_Gray.jpg">-->
+                    <%= image_tag "https://s3.amazonaws.com/nvest/Blank_Club_Website_Avatar_Gray.jpg", :height => "100px" %><br>
+                    <span class="card-title" style="font-size:12pt;">Brian Faure</span>
+                  </div>
+                  <div class="card-action red center-align">
+                    <a class="black-text" href="https://github.com/bfaure"><!--<img src="images/github.svg" style="height:20px;">--><%= image_tag "github.svg", :height => "20px"%></a>
+                  </div>
+                </div>
+              </div>
+              <div class="col s3">
+                <div class="card">
+                  <div class="card-content center-align">
+                    <!--<img class="circle" height="100px" src="https://s3.amazonaws.com/nvest/Blank_Club_Website_Avatar_Gray.jpg">--><%= image_tag "https://s3.amazonaws.com/nvest/Blank_Club_Website_Avatar_Gray.jpg", :height => "100px" %><br>
+                    <span class="card-title" style="font-size:12pt;">Nathan Kjer</span>
+                  </div>
+                  <div class="card-action orange center-align">
+                    <a class="black-text" href="https://github.com/nathankjer"><!--<img src="images/github.svg" style="height:20px;">--><%= image_tag "github.svg", :height => "20px" %></a>
+                  </div>
+                </div>
+              </div>
+              <div class="col s3">
+                <div class="card">
+                  <div class="card-content center-align">
+                    <!--<img class="circle" height="100px" src="https://s3.amazonaws.com/nvest/Blank_Club_Website_Avatar_Gray.jpg">--><%= image_tag "https://s3.amazonaws.com/nvest/Blank_Club_Website_Avatar_Gray.jpg", :height => "100px" %><br>
+                    <span class="card-title" style="font-size:12pt;">Wayne Sun</span>
+                  </div>
+                  <div class="card-action green center-align">
+                    <a class="black-text" href="https://github.com/waynesun95"><!--<img src="images/github.svg" style="height:20px;">--><%= image_tag "github.svg", :height => "20px" %></a>
+                  </div>
+                </div>
+              </div>
+              <div class="col s3">
+                <div class="card">
+                  <div class="card-content center-align">
+                    <!--<img class="circle" height="100px" src="https://s3.amazonaws.com/nvest/Blank_Club_Website_Avatar_Gray.jpg">--><%= image_tag "https://s3.amazonaws.com/nvest/Blank_Club_Website_Avatar_Gray.jpg", :height => "100px" %><br>
+                    <span class="card-title small" style="font-size:12pt;">Luke Wielgus</span>
+                  </div>
+                  <div class="card-action blue center-align">
+                    <a class="black-text" href="https://github.com/lukewielgus"><!--<img src="images/github.svg" style="height:20px;">--><%= image_tag "github.svg", :height => "20px" %></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <div class="col hide-on-small-only m3 l2">
+          <ul class="section table-of-contents" style="position:fixed;">
+            <li><a href="#intro">About Us</a></li>
+            <li><a href="#model">Our Model</a></li>
+            <li><a href="#team">Our Team</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!--  Scripts-->
+  <%= javascript_include_tag "https://code.jquery.com/jquery-2.1.1.min.js" %>
+  <%= javascript_include_tag "js/materialize.js" %>
+  <%= javascript_include_tag "js/init.js" %>
+
+  </body>
+</html>

@@ -27,8 +27,9 @@
   	<header>
     <nav class="blue" role="navigation">
       <div class="nav-wrapper container">
+      	<%= image_tag "logo_sm.svg", class: 'brand-logo center' %>
         <ul class="right">
-          <li><a href="">Score</a></li>
+          <!--<li><a href="">Score</a></li>-->
         </ul>
       </div>
     </nav>
@@ -43,11 +44,13 @@
 	<main>
     	<%= yield %>
     </main>
-    
+
     <footer class="page-footer blue">
     <div class="footer-copyright">
       <div class="container">
-      <a class="white-text right" href="about.html">About</a>
+      <!--<a class="white-text right" href="about.html">About</a>-->
+      <%= link_to 'Home', '/', class: 'white-text left' %>
+      <%= link_to 'About', 'index/about', class: 'white-text right' %>
       </div>
     </div>
   	</footer>
