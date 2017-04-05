@@ -1,0 +1,70 @@
+<% provide(:title, "Home") %>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+
+  <%= stylesheet_link_tag "https://fonts.googleapis.com/icon?family=Material+Icons" %>
+
+  <%= stylesheet_link_tag "materialize", media: "all" %>
+
+  <%= stylesheet_link_tag "style", media: "all" %>
+
+  <%= stylesheet_link_tag "https://fonts.googleapis.com/css?family=Roboto+Slab|Overpass" %>
+</head>
+<body>
+  
+
+  <main>
+    <br><br>
+    <div class="container">
+      <div class="row">
+        <div class="col s3"></div> 
+        <div class="col s6 center-align"><a href="index.html"><%= image_tag "logo_lg.svg" %></a></div> 
+        <div class="col s3"></div> 
+      </div>
+      <div class="row">
+        <div class="col s3"></div> 
+        <div class="col s6 center-align">
+          	<%= form_tag(articles_path, :method => "get", id: "search-form") do %>
+	    			<%= label_tag(:q, "Search for Article:") %>
+	    			<%= text_field_tag :search, params[:search], placeholder: "Search Articles" %>
+	    			<%= submit_tag "Search", :name => nil %>
+				<% end %>
+
+
+          <!--<nav class="white">
+            <div class="nav-wrapper">
+             <!--<form>
+                <div class="input-field">
+                  <input id="search" type="search" required>
+                  <label for="search"><i class="material-icons black-text">search</i></label>
+                  <i class="material-icons">close</i>
+                </div>
+              </form>
+
+              
+
+
+            </div>
+          </nav>--><br>
+          <a href="about.html"><%= image_tag "banner_main.gif",  :width => "80%" %></a>
+        </div>
+        <div class="col s3" style="padding:0;">
+        </div> 
+      </div>
+    </div>
+  </main>
+
+  
+
+  <!--Style scripts-->
+  <%= javascript_include_tag "https://code.jquery.com/jquery-2.1.1.min.js" %>
+  <%= javascript_include_tag "js/materialize.js" %>
+  <%= javascript_include_tag "js/init.js" %>
+
+  <%= javascript_include_tag "js/d3.v4.js" %>
+
+  </body>
+</html>

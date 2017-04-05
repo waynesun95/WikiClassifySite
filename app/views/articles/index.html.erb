@@ -1,89 +1,14 @@
-<% provide(:title, "Home") %>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
-  <!--<link rel=icon href="images/favicon.png">-->
-  <!--<title>WikiClassify</title>-->
+<% provide(:title, "Search Results") %>
 
-  <!-- CSS  -->
-  <!--<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">-->
-  <%= stylesheet_link_tag "https://fonts.googleapis.com/icon?family=Material+Icons" %>
-  <!--<link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>-->
-  <%= stylesheet_link_tag "materialize", media: "all" %>
-  <!--<link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>-->
-  <%= stylesheet_link_tag "style", media: "all" %>
-  <!--<link href="https://fonts.googleapis.com/css?family=Roboto+Slab|Overpass" rel="stylesheet">-->
-  <%= stylesheet_link_tag "https://fonts.googleapis.com/css?family=Roboto+Slab|Overpass" %>
-</head>
-<body>
-  <header>
-    <nav class="blue" role="navigation">
-      <div class="nav-wrapper container">
-        <ul class="right">
-          <li><a href="">Score</a></li>
-        </ul>
-      </div>
-    </nav>
-  </header>
 
-  <main>
-    <br><br>
-    <div class="container">
-      <div class="row">
-        <div class="col s3"></div> 
-        <div class="col s6 center-align"><a href="index.html"><!--<img src="images/logo_lg.svg">--><%= image_tag "logo_lg.svg" %></a></div> 
-        <div class="col s3"></div> 
-      </div>
-      <div class="row">
-        <div class="col s3"></div> 
-        <div class="col s6 center-align">
-          <nav class="white">
-            <div class="nav-wrapper">
-              <form>
-                <div class="input-field">
-                  <input id="search" type="search" required>
-                  <label for="search"><i class="material-icons black-text">search</i></label>
-                  <i class="material-icons">close</i>
-                </div>
-              </form>
-            </div>
-          </nav><br>
-          <a href="about.html"><!--<img class="z-depth-1" src="images/banner_main.gif" style="width:80%;">--><%= image_tag "banner_main.gif",  :width => "80%" %></a>
-        </div>
-        <div class="col s3" style="padding:0;">
-        </div> 
-      </div>
-    </div>
-  </main>
+<h3>Search Results for "<%= params[:search] %>"</h3>
 
-  <footer class="page-footer blue">
-    <div class="footer-copyright">
-      <div class="container">
-      <a class="white-text right" href="about.html">About</a>
-      </div>
-    </div>
-  </footer>
+<br>
 
-  <!--Style scripts-->
-  <!--<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-  <script src="js/materialize.js"></script>
-  <script src="js/init.js"></script>-->
-  <%= javascript_include_tag "https://code.jquery.com/jquery-2.1.1.min.js" %>
-  <%= javascript_include_tag "js/materialize.js" %>
-  <%= javascript_include_tag "js/init.js" %>
+<% if @articles.blank? %>
+  <h4>There are no articles named "<%= params[:search] %>"</h4>
+<% end %>
 
-  <!--Interactive scripts-->
-  <!--<script src="js/d3.v4.js"></script>-->
-  <%= javascript_include_tag "js/d3.v4.js" %>
-
-  </body>
-</html>
-
-<p id="notice"><%= notice %></p>
-
-<h1>Articles</h1>
 
 <table>
   <thead>

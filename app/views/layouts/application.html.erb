@@ -9,9 +9,55 @@
 
     <%= favicon_link_tag "favicon.png" %>
 
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+
+  	<%= stylesheet_link_tag "https://fonts.googleapis.com/icon?family=Material+Icons" %>
+
+  	<%= stylesheet_link_tag "materialize", media: "all" %>
+
+  	<%= stylesheet_link_tag "style", media: "all" %>
+
+  	<%= stylesheet_link_tag "https://fonts.googleapis.com/css?family=Roboto+Slab|Overpass" %>
+
+
   </head>
 
   <body>
-    <%= yield %>
+  	<header>
+    <nav class="blue" role="navigation">
+      <div class="nav-wrapper container">
+        <ul class="right">
+          <li><a href="">Score</a></li>
+        </ul>
+      </div>
+    </nav>
+  	</header>
+  	<!--<header>
+	  	<%= form_tag(articles_path, :method => "get", id: "search-form") do %>
+	    	<%= label_tag(:q, "Search for Article:") %>
+	    	<%= text_field_tag :search, params[:search], placeholder: "Search Articles" %>
+	    	<%= submit_tag "Search", :name => nil %>
+		<% end %>
+	</header>-->
+	<main>
+    	<%= yield %>
+    </main>
+    
+    <footer class="page-footer blue">
+    <div class="footer-copyright">
+      <div class="container">
+      <a class="white-text right" href="about.html">About</a>
+      </div>
+    </div>
+  	</footer>
+
+  	  <!--Style scripts-->
+  <%= javascript_include_tag "https://code.jquery.com/jquery-2.1.1.min.js" %>
+  <%= javascript_include_tag "js/materialize.js" %>
+  <%= javascript_include_tag "js/init.js" %>
+
+  <%= javascript_include_tag "js/d3.v4.js" %>
+
   </body>
 </html>
