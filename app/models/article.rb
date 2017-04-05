@@ -5,7 +5,7 @@ class Article < ApplicationRecord
 
 	#for searching for articles
 	def self.search(search)
-		where("title LIKE ?", "%#{search}%")
+		where("title ILIKE ?", "%#{search}%")
 	end
 
 end
