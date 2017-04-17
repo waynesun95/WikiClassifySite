@@ -5,7 +5,11 @@ class Article < ApplicationRecord
 
 	#for searching for articles
 	def self.search(search)
-		where("title ILIKE ?", "%#{search}%")
+
+		#ILIKE for POSTGRESQL
+
+		#where("title ILIKE ?", "%#{search}%")
+		where("title LIKE ?", "%#{search}%")
 	end
 
 end

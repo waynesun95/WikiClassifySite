@@ -1,4 +1,8 @@
+<% provide(:title, @article.title) %>
+
 <p id="notice"><%= notice %></p>
+
+<%= link_to 'Check out the Wikipedia article here!', 'https://en.wikipedia.org/wiki/' << @article.title %>
 
 <p>
   <strong>Title:</strong>
