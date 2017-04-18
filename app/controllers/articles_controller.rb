@@ -4,12 +4,32 @@ class ArticlesController < ApplicationController
   # GET /articles
   # GET /articles.json
   def index
-    @articles = Article.all
-
     if params[:search]
-      @articles = Article.search(params[:search]).order("created_at DESC")
+      @articles = Article.search(params[:search]).order(:title)
+        #if :sort_id == nil
+        #  @articles = Article.search(params[:search]).order(:title)
+        #else
+        #  if :sort_id == 1
+        #    @articles = Article.search(params[:search]).order(:title)
+        #  elsif :sort_id == 2
+        #    @articles = Article.search(params[:search]).order(:categories)
+        #  elsif :sort_id == 3
+        #    @articles = Article.search(params[:search]).order(:quality)
+        #  elsif :sort_id == 4
+        #    @articles = Article.search(params[:search]).order(:importance)
+        #  end
+        #end
     else
-      @articles = Article.all
+      #@articles = Article.all
+      if :sort_id == 1
+          @articles = Article.search(params[:search]).order(:title)
+      elsif :sort_id == 2
+        @articles = Article.search(params[:search]).order(:categories)
+      elsif :sort_id == 3
+        @articles = Article.search(params[:search]).order(:quality)
+      elsif :sort_id == 4
+        @articles = Article.search(params[:search]).order(:importance)
+      end
     end
   end
 

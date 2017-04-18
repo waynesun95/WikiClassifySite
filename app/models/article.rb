@@ -12,4 +12,7 @@ class Article < ApplicationRecord
 		where("title LIKE ?", "%#{search}%")
 	end
 
+	#list items in drop down menu to sort search results
+	SORT_BY = ['Title', 'Category', 'Quality', 'Importance']
+
 end
