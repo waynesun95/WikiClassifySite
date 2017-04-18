@@ -15,4 +15,8 @@ class Article < ApplicationRecord
 	#list items in drop down menu to sort search results
 	SORT_BY = ['Title', 'Category', 'Quality', 'Importance']
 
+	#delimit the categories by "|" so we can list it nicer on html view
+	attr_accessor :delimited_categories
+
+
 end

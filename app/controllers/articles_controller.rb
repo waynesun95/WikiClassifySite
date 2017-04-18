@@ -20,22 +20,24 @@ class ArticlesController < ApplicationController
         #  end
         #end
     else
-      #@articles = Article.all
-      if :sort_id == 1
-          @articles = Article.search(params[:search]).order(:title)
-      elsif :sort_id == 2
-        @articles = Article.search(params[:search]).order(:categories)
-      elsif :sort_id == 3
-        @articles = Article.search(params[:search]).order(:quality)
-      elsif :sort_id == 4
-        @articles = Article.search(params[:search]).order(:importance)
-      end
+      @articles = Article.all
+      #if :sort_id == 1
+      #    @articles = Article.search(params[:search]).order(:title)
+      #elsif :sort_id == 2
+      #  @articles = Article.search(params[:search]).order(:categories)
+      #elsif :sort_id == 3
+      #  @articles = Article.search(params[:search]).order(:quality)
+      #elsif :sort_id == 4
+      #  @articles = Article.search(params[:search]).order(:importance)
+      #end
     end
   end
 
   # GET /articles/1
   # GET /articles/1.json
   def show
+    #parse out categories from categories 
+    @delimited_categories = @article.categories.split("|")
   end
 
   # GET /articles/new
