@@ -38,6 +38,7 @@ class ArticlesController < ApplicationController
   def show
     #parse out categories from categories 
     @article.categories.gsub! 'Category:', ''
+    @article.categories.gsub! '_', ' '
     @delimited_categories = @article.categories.split("|")
   end
 
