@@ -41,6 +41,7 @@ class ArticlesController < ApplicationController
     @article.categories.gsub! '_', ' '
     @delimited_categories = @article.categories.split("|")
 
+    @article.cited_domains.gsub! ' ', ''
     @delimited_domains = @article.cited_domains.split("|")
 
     @article.cited_authors.gsub! '_', ' '
