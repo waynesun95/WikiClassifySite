@@ -28,8 +28,48 @@
             <tbody>
               <tr>
                 <td>WikiClassify Score</td>
-                <td><div class="chip blue white-text"><%= @article.importance %></div></td>
-                <td><!--<img src="images/star_full.svg"><img src="images/star_full.svg"><img src="images/star_full.svg"><img src="images/star_half.svg"><img src="images/star_empty.svg">--><div class="chip blue white-text"><%= @article.quality %></div></td>
+                <td><!--<div class="chip blue white-text"><%= @article.importance %></div>-->
+                  
+                <% if @article.importance == "top" %>
+                  <div class="chip fa white-text">Top</div>
+                <% elsif @article.importance == "high" %>
+                  <div class="chip ga white-text">High</div>
+                <% elsif @article.importance == "mid" %>
+                  <div class="chip c white-text">Mid</div>
+                <% elsif @article.importance == "low" %>
+                  <div class="chip stub white-text">Low</div>
+                <% else %>
+                  <div class="chip blue white-text"><%= @article.importance %></div>
+                <% end %>
+
+                </td>
+                <td><!--<img src="images/star_full.svg"><img src="images/star_full.svg"><img src="images/star_full.svg"><img src="images/star_half.svg"><img src="images/star_empty.svg">-->
+
+                <% if @article.quality == "fa" %>
+                  <div class="chip fa white-text">Featured</div>
+                <% elsif @article.quality == "a" %>
+                  <div class="chip a white-text">A-Class</div>
+                <% elsif @article.quality == "ga" %>
+                  <div class="chip ga white-text">Good</div>
+                <% elsif @article.quality == "b" %>
+                  <div class="chip b white-text">B</div>
+                <% elsif @article.quality == "c" %>
+                  <div class="chip c white-text">C</div>
+                <% elsif @article.quality == "start" %>
+                  <div class="chip start white-text">Start</div>
+                <% elsif @article.quality == "stub" %>
+                  <div class="chip stub white-text">Stub</div>
+                <% else %>
+                  <div class="chip teal white-text"><%= @article.quality %></div>
+                <% end %>
+                  
+                  
+                  
+                  
+                  
+                  
+
+                <!--<div class="chip teal white-text"><%= @article.quality %></div>--></td>
               </tr>
               <!--<tr>
                 <td>Wikipedia Score</td>
