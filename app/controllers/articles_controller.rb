@@ -37,7 +37,8 @@ class ArticlesController < ApplicationController
   # GET /articles/1.json
   def show
     #parse out categories from categories 
-    @delimited_categories = @article.categories.split("| Category:")
+    @article.categories.gsub! 'Category:', ''
+    @delimited_categories = @article.categories.split("|")
   end
 
   # GET /articles/new
