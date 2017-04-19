@@ -2660,6 +2660,19 @@ video.responsive-video {
   height: auto;
 }
 
+img.brand-logo.center {
+  img {
+  border-radius: 50%;
+  -webkit-transition: -webkit-transform .8s ease-in-out;
+          transition:         transform .8s ease-in-out;
+  }
+  img:hover {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+
 .pagination li {
   display: inline-block;
   border-radius: 2px;

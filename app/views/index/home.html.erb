@@ -14,7 +14,6 @@
   <%= stylesheet_link_tag "https://fonts.googleapis.com/css?family=Roboto+Slab|Overpass" %>
 </head>
 <body>
-  
 
   <main>
     <br><br>
@@ -49,7 +48,7 @@
 
             </div>
           </nav>--><br>
-          <%= link_to image_tag("banner_main.gif",  :width => "80%"), "index/about" %>
+          <div class="brand-logo.center"><%= link_to image_tag("banner_main.gif",  :width => "80%", :class => "img.brand-logo.center"), "index/about" %></div>
         </div>
         <div class="col s3" style="padding:0;">
         </div> 
@@ -57,7 +56,8 @@
     </div>
   </main>
 
-  
+  	<p><font color="white">REGGI MUH FRIEND :)</font></p>
+
 
   <!--Style scripts-->
   <%= javascript_include_tag "https://code.jquery.com/jquery-2.1.1.min.js" %>
