@@ -2,46 +2,126 @@
 
 <p id="notice"><%= notice %></p>
 
-<%= link_to 'Check out the Wikipedia article here!', 'https://en.wikipedia.org/wiki/' << @article.title %>
+<!--<%= link_to 'Check out the Wikipedia article here!', 'https://en.wikipedia.org/wiki/' << @article.title %>-->
 
-<p>
+<!--<p>
   <strong>Title:</strong>
   <%= @article.title %>
-</p>
+</p>-->
 
-<p>
-  <strong>Categories:</strong>
-  <!--<%= @article.categories %>-->
-  <% @delimited_categories.each do |category| %>
-    <li><%= category %></li>
-  <% end %>
-</p>
+<body>
+  <main>
+    <div class="container">
+      <div class="row">
+        <div class="col s3"></div> 
+        <div class="col s6">
+          <h2 class="center-align"><%= link_to @article.title, 'https://en.wikipedia.org/wiki/' << @article.title %></h2>
+          <h4 class="center-align">Report card</h4>
+          <table class="centered black-text">
+            <thead>
+              <tr>
+                  <th data-field="id"></th>
+                  <th data-field="name"><a class="black-text" href="https://en.wikipedia.org/wiki/Wikipedia:WikiProject_Wikipedia/Assessment#Importance_scale">Importance</a></th>
+                  <th data-field="price"><a class="black-text" href="https://en.wikipedia.org/wiki/Template:Grading_scheme">Quality</a></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>WikiClassify Score</td>
+                <td><div class="chip blue white-text"><%= @article.importance %></div></td>
+                <td><!--<img src="images/star_full.svg"><img src="images/star_full.svg"><img src="images/star_full.svg"><img src="images/star_half.svg"><img src="images/star_empty.svg">--><div class="chip blue white-text"><%= @article.quality %></div></td>
+              </tr>
+              <!--<tr>
+                <td>Wikipedia Score</td>
+                <td><div class="chip blue darken-3 white-text">High</div></td>
+                <td><img src="images/star_full.svg"><img src="images/star_full.svg"><img src="images/star_full.svg"><img src="images/star_full.svg"><img src="images/star_full.svg"></td>
+              </tr>-->
+            </tbody>
+          </table>
+          
+          <h4 class="center-align">Categories</h4>
+          <div class="center-align">
+            <% @delimited_categories.each do |category| %>
+              <div class="chip"><div class = "black-text"><%= category %></div></div>
+            <% end %>
+          </div>
 
-<p>
-  <strong>Cited domains:</strong>
-  <!--<%= @article.cited_domains %>-->
-  <% @delimited_domains.each do |domain| %>
-    <li><%= domain %></li>
-  <% end %>
-</p>
+          <h4 class="center-align">Cited Domains</h4>
+          <div class="center-align">
+            <% @delimited_domains.each do |domain| %>
+              <div class="chip"><div class = "black-text"><%= link_to domain, domain %></div></div>
+            <% end %>
+          </div>
 
-<p>
-  <strong>Cited authors:</strong>
-  <!--<%= @article.cited_authors %>-->
-  <% @delimited_authors.each do |author| %>
-    <li><%= author %></li>
-  <% end %>
-</p>
+          <h4 class="center-align">Cited Authors</h4>
+          <div class="center-align">
+            <% @delimited_authors.each do |author| %>
+              <div class="chip"><div class = "black-text"><%= author %></div></div>
+            <% end %>
+          </div>
 
-<p>
-  <strong>Quality:</strong>
-  <%= @article.quality %>
-</p>
+        </div>
+        <div class="col s3"></div> 
+      </div>
+    </div>
+  </main>
 
-<p>
-  <strong>Importance:</strong>
-  <%= @article.importance %>
-</p>
+  </body>
 
-<%= link_to 'Edit', edit_article_path(@article) %> |
-<%= link_to 'Back', articles_path %>
+<!--<main>
+    <br><br>
+    <div class="container">
+      <div class="row">
+        <div class="col s3"></div> 
+        <div class="col s6 center-align"><%= @article.title %></div> 
+        <div class="col s3"></div> 
+      </div>
+      <div class="row">
+        <div class="col s3"></div> 
+        <div class="col s6 center-align">
+           <p>
+            <strong>Categories:</strong>
+            <!--<%= @article.categories %>
+            <% @delimited_categories.each do |category| %>
+              <li><%= category %></li>
+            <% end %>
+          </p>
+
+          <p>
+            <strong>Cited domains:</strong>
+            <!--<%= @article.cited_domains %>
+            <% @delimited_domains.each do |domain| %>
+              <li><%= domain %></li>
+            <% end %>
+          </p>
+
+          <p>
+            <strong>Cited authors:</strong>
+            <!--<%= @article.cited_authors %>
+            <% @delimited_authors.each do |author| %>
+              <li><%= author %></li>
+            <% end %>
+          </p>
+
+          <p>
+            <strong>Quality:</strong>
+            <%= @article.quality %>
+          </p>
+
+          <p>
+            <strong>Importance:</strong>
+            <%= @article.importance %>
+          </p>
+
+          <%= link_to 'Edit', edit_article_path(@article) %> |
+          <%= link_to 'Back', articles_path %>
+          
+        </div>
+        <div class="col s3" style="padding:0;">
+        </div> 
+      </div>
+    </div>
+</main>-->
+
+
+

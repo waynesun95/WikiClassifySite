@@ -1,15 +1,29 @@
 <% provide(:title, "Search Results") %>
 
+<h2 class="center-align">Search Results for "<%= params[:search] %>"</h2>
 
-<h3>Search Results for "<%= params[:search] %>"</h3>
 
 <br>
 
 <% if @articles.blank? %>
-  <h4>There are no articles named "<%= params[:search] %>"</h4>
+  <h4 class="center-align">There are no articles named "<%= params[:search] %>"</h4>
 <% end %>
 
-<div class = 'col s3'>
+<table class="centered black-text">
+  <thead>
+  </thead>
+
+  <tbody>
+    <% @articles.each do |article| %>
+      <tr>
+        <td><h6><%= link_to article.title, article %></h6></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+
+<!--<div class = 'col s3'>
 <%= form_tag(articles_path, :method => :get) do %>
   <b><%= label_tag(:q, "Sort by") %></b>
   <%= select_tag(:sort_id, options_for_select(Article::SORT_BY), :selected => 1) %>
@@ -48,4 +62,4 @@
 
 <br>
 
-<%= link_to 'New Article', new_article_path %>
+<%= link_to 'New Article', new_article_path %>-->
