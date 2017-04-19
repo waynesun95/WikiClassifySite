@@ -19,12 +19,18 @@
 
 <p>
   <strong>Cited domains:</strong>
-  <%= @article.cited_domains %>
+  <!--<%= @article.cited_domains %>-->
+  <% @delimited_domains.each do |domain| %>
+    <li><%= domain %></li>
+  <% end %>
 </p>
 
 <p>
   <strong>Cited authors:</strong>
-  <%= @article.cited_authors %>
+  <!--<%= @article.cited_authors %>-->
+  <% @delimited_authors.each do |author| %>
+    <li><%= author %></li>
+  <% end %>
 </p>
 
 <p>

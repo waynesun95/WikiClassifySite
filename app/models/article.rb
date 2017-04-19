@@ -17,6 +17,8 @@ class Article < ApplicationRecord
 
 	#delimit the categories by "|" so we can list it nicer on html view
 	attr_accessor :delimited_categories
+	attr_accessor :delimited_domains
+	attr_accessor :delimited_authors
 
 
 end

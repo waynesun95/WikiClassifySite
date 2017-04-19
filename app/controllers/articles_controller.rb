@@ -40,6 +40,11 @@ class ArticlesController < ApplicationController
     @article.categories.gsub! 'Category:', ''
     @article.categories.gsub! '_', ' '
     @delimited_categories = @article.categories.split("|")
+
+    @delimited_domains = @article.cited_domains.split("|")
+
+    @article.cited_authors.gsub! '_', ' '
+    @delimited_authors = @article.cited_authors.split("|")
   end
 
   # GET /articles/new
