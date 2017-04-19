@@ -49,7 +49,11 @@
           <h4 class="center-align">Cited Domains</h4>
           <div class="center-align">
             <% @delimited_domains.each do |domain| %>
-              <div class="chip"><div class = "black-text"><%= link_to domain, 'http://' << domain %></div></div>
+              <% if domain == "NONE" %>
+                <div class="chip"><div class = "black-text"><%= domain %></div></div>
+              <% else %>
+                <div class="chip"><div class = "black-text"><%= link_to domain, 'http://' << domain %></div></div>
+              <%end%>
             <% end %>
           </div>
 
