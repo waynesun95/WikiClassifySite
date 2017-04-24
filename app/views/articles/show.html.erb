@@ -15,7 +15,7 @@
       <div class="row">
         <div class="col s3"></div> 
         <div class="col s6">
-          <h2 class="center-align"><%= link_to @article.title, 'http://en.wikipedia.org/wiki/' << @article.title %></h2>
+          <h2 class="center-align"><%= link_to @article.title.gsub("_", " "), 'http://en.wikipedia.org/wiki/' << @article.title %></h2>
           <h4 class="center-align">Report card</h4>
           <table class="centered black-text">
             <thead>
