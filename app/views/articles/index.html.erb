@@ -16,7 +16,7 @@
   <tbody>
     <% @articles.each do |article| %>
       <tr>
-        <td><h6><%= link_to article.title, article %></h6></td>
+        <td><h6><%= link_to article.title.gsub("_", " "), article %></h6></td>
       </tr>
     <% end %>
   </tbody>

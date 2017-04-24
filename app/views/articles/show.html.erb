@@ -82,7 +82,7 @@
           <h4 class="center-align">Categories</h4>
           <div class="center-align">
             <% @delimited_categories.each do |category| %>
-              <div class="chip"><div class = "black-text"><%= category %></div></div>
+              <div class="chip"><div class = "black-text"><%= link_to category, 'https://en.wikipedia.org/wiki/Category:' << category %></div></div>
             <% end %>
           </div>
 
