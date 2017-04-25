@@ -104,6 +104,15 @@
             <% end %>
           </div>
 
+          <% if @article.nearestarticles != nil %>
+            <h4 class="center-align">Closest Articles</h4>
+            <div class="center-align">
+              <% @delimited_nearestarticles.each do |article| %>
+                <div class="chip"><div class = "black-text"><%= link_to article.gsub("_", " "), article %></div></div>
+              <% end %>
+            </div>
+          <% end %>
+
         </div>
         <div class="col s3"></div> 
       </div>

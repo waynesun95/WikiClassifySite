@@ -19,6 +19,8 @@ class Article < ApplicationRecord
 	attr_accessor :delimited_categories
 	attr_accessor :delimited_domains
 	attr_accessor :delimited_authors
+	attr_accessor :delimited_nearestarticles
+	#attr_accessor :closest_articles
 
 
 end

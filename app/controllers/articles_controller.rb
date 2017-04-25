@@ -46,6 +46,16 @@ class ArticlesController < ApplicationController
 
     @article.cited_authors.gsub! '_', ' '
     @delimited_authors = @article.cited_authors.split("|")
+
+    if @article.nearestarticles != nil
+      #@closest_articles = Array.new
+      @article.nearestarticles.gsub! ' ', ''
+      @delimited_nearestarticles = @article.nearestarticles.split("|")
+      #@delimited_nearestarticles.each do |current_article|
+      #  @closest_articles.push(Article.find_by_title(current_article))
+      #end
+    end
+
   end
 
   # GET /articles/new
