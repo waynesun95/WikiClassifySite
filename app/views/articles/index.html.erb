@@ -9,6 +9,13 @@
   <h4 class="center-align">There are no articles named "<%= params[:search] %>"</h4>
 <% end %>
 
+<div class = 'col s3'>
+<%= form_tag(articles_path, :method => :get) do %>
+  <b><%= label_tag(:q, "Sort by") %></b>
+  <%= select_tag(:sort_id, options_for_select(Article::SORT_BY), :selected => 1) %>
+<% end %>
+</div>
+
 <table class="centered black-text">
   <thead>
   </thead>
@@ -22,15 +29,7 @@
   </tbody>
 </table>
 
-
-<!--<div class = 'col s3'>
-<%= form_tag(articles_path, :method => :get) do %>
-  <b><%= label_tag(:q, "Sort by") %></b>
-  <%= select_tag(:sort_id, options_for_select(Article::SORT_BY), :selected => 1) %>
-<% end %>
-</div>
-
-<table>
+<!--<table>
   <thead>
     <tr>
       <th>Title</th>
