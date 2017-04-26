@@ -82,7 +82,7 @@
           <h4 class="center-align">Categories</h4>
           <div class="center-align">
             <% @delimited_categories.each do |category| %>
-              <div class="chip"><div class = "black-text"><%= link_to category, 'https://en.wikipedia.org/wiki/Category:' << category %></div></div>
+              <div class="chip"><div class = "black-text"><%= link_to category, 'https://en.wikipedia.org/wiki/Category:' << category, target: :_blank %></div></div>
             <% end %>
           </div>
 
@@ -92,7 +92,7 @@
               <% if domain == "NONE" %>
                 <div class="chip"><div class = "black-text"><%= domain %></div></div>
               <% else %>
-                <div class="chip"><div class = "black-text"><%= link_to domain, 'http://' << domain %></div></div>
+                <div class="chip"><div class = "black-text"><%= link_to domain, 'http://' << domain, target: :_blank %></div></div>
               <%end%>
             <% end %>
           </div>
@@ -108,7 +108,7 @@
             <h4 class="center-align">Closest Articles</h4>
             <div class="center-align">
               <% @delimited_nearestarticles.each do |article| %>
-                <div class="chip"><div class = "black-text"><%= link_to article.gsub("_", " "), article %></div></div>
+                <div class="chip"><div class = "black-text"><%= link_to article.gsub("_", " "), article, target: :_blank %></div></div>
               <% end %>
             </div>
           <% end %>
