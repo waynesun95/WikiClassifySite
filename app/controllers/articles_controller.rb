@@ -39,12 +39,15 @@ class ArticlesController < ApplicationController
     #parse out categories from categories 
     @article.categories.gsub! 'Category:', ''
     @article.categories.gsub! '_', ' '
+    @article.categories.gsub! '&squot', "'" 
     @delimited_categories = @article.categories.split("|")
 
     @article.cited_domains.gsub! ' ', ''
     @delimited_domains = @article.cited_domains.split("|")
 
     @article.cited_authors.gsub! '_', ' '
+    @article.cited_authors.gsub! '[[', ''
+    @article.cited_authors.gsub! ']]', ''
     @delimited_authors = @article.cited_authors.split("|")
 
     if @article.nearestarticles != nil
