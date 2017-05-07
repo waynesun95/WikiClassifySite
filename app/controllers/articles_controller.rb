@@ -53,6 +53,7 @@ class ArticlesController < ApplicationController
     if @article.nearestarticles != nil
       #@closest_articles = Array.new
       @article.nearestarticles.gsub! ' ', ''
+      @article.nearestarticles.gsub! '&squot', "'" 
       @delimited_nearestarticles = @article.nearestarticles.split("|")
       #@delimited_nearestarticles.each do |current_article|
       #  @closest_articles.push(Article.find_by_title(current_article))

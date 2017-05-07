@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170425035456) do
+ActiveRecord::Schema.define(version: 20170506234457) do
 
   create_table "articles", force: :cascade do |t|
     t.string   "title"
@@ -23,6 +23,7 @@ ActiveRecord::Schema.define(version: 20170425035456) do
     t.datetime "updated_at",      null: false
     t.string   "slug"
     t.string   "nearestarticles"
+    t.string   "source_quality"
     t.index ["slug"], name: "index_articles_on_slug", unique: true
   end
 
